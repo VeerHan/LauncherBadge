@@ -14,12 +14,26 @@
         android:id="@+id/btn_add"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="add count" />
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="3rd Party add count" />
 
     <Button
         android:id="@+id/btn_remove"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="remove count" />
+        android:text="3rd Party remove count" />
+
+    <Button
+        android:id="@+id/btn_custom_add"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:text="particular add count" />
+
+    <Button
+        android:id="@+id/btn_custom_remove"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="particular remove count" />
 
 </LinearLayout>
