@@ -6,6 +6,7 @@ import android.content.pm.PackageManager;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -15,6 +16,7 @@ import me.leolin.shortcutbadger.ShortcutBadger;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = MainActivity.class.getSimpleName();
     private int badgeCount;//待显示的角标数量
     private Button btnAdd, btnRemove, btnPartAdd, btnPartRemove;
 
@@ -44,12 +46,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_custom_add:
                 badgeCount = 8;
                 if (DeviceUtil.isSpecialDevice(DeviceUtil.DEVICE_SAMSUNG)) {
+                    Log.d(TAG, "DEVICE_SAMSUNG add count");
                     setSamsungBadge(this, badgeCount);
                 }
                 break;
             case R.id.btn_custom_remove:
                 badgeCount = 0;
                 if (DeviceUtil.isSpecialDevice(DeviceUtil.DEVICE_SAMSUNG)) {
+                    Log.d(TAG, "DEVICE_SAMSUNG remove count");
                     setSamsungBadge(this, badgeCount);
                 }
                 break;
