@@ -38,10 +38,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.btn_add:
+                badgeCount = 8;
                 ShortcutBadger.applyCount(this, badgeCount);
                 break;
             case R.id.btn_remove:
-                ShortcutBadger.removeCount(this);
+                badgeCount = 0;
+                ShortcutBadger.applyCount(this, badgeCount);
                 break;
             case R.id.btn_custom_add:
                 badgeCount = 8;
